@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn-success{
+    outline-color: var(--fallback-su,oklch(var(--su)/1));
+}
