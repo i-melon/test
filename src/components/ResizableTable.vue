@@ -6,7 +6,7 @@
           <td>
             <div id="test" class="resizable flex justify-between min-w-[50px] " >
               <div class="flex gap-2 items-center">
-                <input class="checkbox checkbox-success" @change="selectAll" v-model="isAllSelected" type="checkbox">
+                <input class="checkbox checkbox-success checkbox-sm" @change="selectAll" v-model="isAllSelected" type="checkbox">
                 <h1>Select all</h1>
               </div>
               <div class="resize1 flex items-center w-5 justify-end resize-x overflow-auto"><div class="hover:bg-primary w-0.5 h-[15px] bg-neutral-content self-center getPurple"></div></div>
@@ -45,7 +45,7 @@
       </thead>
       <tbody>
         <tr :class="{'bg-base-300':(elem.id%2==0)}" v-for="elem in controllers" v-bind:key="elem.id">
-          <td><input class="checkbox" type="checkbox" v-model="elem.isChecked"></td>
+          <td><input class="checkbox checkbox-sm" type="checkbox" v-model="elem.isChecked"></td>
           <td>{{elem.added}}</td>
           <td>{{ elem.address }}</td>
           <td>{{ elem.mac }}</td>
