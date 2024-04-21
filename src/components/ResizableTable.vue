@@ -126,16 +126,9 @@ export default {
   },
   methods:{
     selectAll(){
-      let controllers = this.controllers
-      if (this.isAllSelected){
-        for (let i = 0; i < controllers.length; i++){
-          controllers[i].isChecked = true;
-        }
-      } else{
-        for (let i = 0; i < controllers.length; i++){
-          controllers[i].isChecked = false;
-        }
-      }
+      this.controllers.forEach(elem => {
+        elem.isChecked = this.isAllSelected;
+      })
     }
   }
 
@@ -157,7 +150,7 @@ table{
 .resize1:hover .getPurple{
   width: 4px;
   height: 20px;
-  background: oklch(0.458 0.236 292.594);
+  background: oklch(0.479 0.225 297.014);
 }
 td{
   padding: 12px 16px;
